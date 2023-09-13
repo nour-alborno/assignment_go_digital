@@ -48,7 +48,7 @@ class _InfoScreenState extends State<InfoScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text(convertDataToModel().city! ??"", style: TextStyle(
+                Text(convertDataToModel().city! , style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
@@ -56,8 +56,8 @@ class _InfoScreenState extends State<InfoScreen> {
                 ),),
                 SizedBox(height: 15.h,),
                 Text(
-                  convertDataToModel().description! ?? ""  , style: TextStyle(
-                    color: Colors.black,
+                  convertDataToModel().description!   , style: TextStyle(
+                    color: Colors.black87,
                     fontSize: 14.sp,
                 ),),
                 SizedBox(height: 15.h,),
@@ -95,7 +95,7 @@ class _InfoScreenState extends State<InfoScreen> {
                   SizedBox(height: 15.h,),
 
                Row(children: [
-                 Text("More in ${convertDataToModel().country! ?? ""}", style: TextStyle(
+                 Text("More in ${convertDataToModel().country! }", style: TextStyle(
                      color: Colors.green.shade700,
                      fontSize: 18.sp,
                      fontWeight: FontWeight.bold
