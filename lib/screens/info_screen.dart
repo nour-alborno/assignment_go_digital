@@ -83,7 +83,7 @@ class _InfoScreenState extends State<InfoScreen> {
                       margin: EdgeInsets.only(right: 10.w),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(10.r)),
-                          color: Colors.black
+                          color: Colors.black54
                       ),
                       child: Center(
                         child: Text("+ ${convertDataToModel().images!.length ?? 0 - 4?? 0}",
