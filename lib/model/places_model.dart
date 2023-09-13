@@ -14,7 +14,7 @@ class Places {
 
   }
 
-  // Fields with simple getters and setters
+
   String? get id => _id;
   set id(String? value) => _id = value;
 
