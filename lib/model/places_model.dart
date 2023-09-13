@@ -1,27 +1,17 @@
 class Places {
-  String? _image;
-  String? _name;
-  String? _description;
+  List<String>? images;
+  String? country;
+  String? city;
+  String? description;
+  String? id ;
 
-  Places(this._image, this._name, this._description);
+  Places(Map map){
+    this.country = map["country"];
+    this.city = map['city'];
+    this.description = map["description"];
+    this.images = map["images"];
+    this.id = map["id"];
 
-  String get description => description;
-
-  set description(String value) {
-    _description = value;
   }
-
-  String get name => name;
-
-  set name(String value) {
-    _name = value;
-  }
-
-  String get image => image;
-
-  set image(String value) {
-    _image = value;
-  }
-
 
 }
