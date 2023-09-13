@@ -15,7 +15,7 @@ class InfoScreen extends StatefulWidget {
 
 class _InfoScreenState extends State<InfoScreen> {
 
-  Places? placesModel;
+
 
   Places convertDataToModel() {
     return Places(place);
@@ -48,7 +48,7 @@ class _InfoScreenState extends State<InfoScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Text(convertDataToModel().city! , style: TextStyle(
+                Text(convertDataToModel().city! ?? "" , style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
@@ -56,7 +56,7 @@ class _InfoScreenState extends State<InfoScreen> {
                 ),),
                 SizedBox(height: 15.h,),
                 Text(
-                  convertDataToModel().description!   , style: TextStyle(
+                  convertDataToModel().description! ?? ""   , style: TextStyle(
                     color: Colors.black87,
                     fontSize: 14.sp,
                 ),),
@@ -86,7 +86,7 @@ class _InfoScreenState extends State<InfoScreen> {
                           color: Colors.black
                       ),
                       child: Center(
-                        child: Text("+ ${convertDataToModel().images!.length - 4?? 0}",
+                        child: Text("+ ${convertDataToModel().images!.length ?? 0 - 4?? 0}",
                           style: TextStyle(color: Colors.white, fontSize: 20.sp,fontWeight: FontWeight.bold, fontFamily: GoogleFonts.tajawal().fontFamily),),
                       ),
                     )
@@ -95,7 +95,7 @@ class _InfoScreenState extends State<InfoScreen> {
                   SizedBox(height: 15.h,),
 
                Row(children: [
-                 Text("More in ${convertDataToModel().country! }", style: TextStyle(
+                 Text("More in ${convertDataToModel().country! ?? ""}", style: TextStyle(
                      color: Colors.green.shade700,
                      fontSize: 18.sp,
                      fontWeight: FontWeight.bold
